@@ -6,7 +6,11 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
-  base: '/portfolio/', // Cambia esto si tu repo tiene otro nombre
+  site: 'https://Ghavvvo.github.io', // Reemplaza 'tuusuario' con tu nombre de usuario de GitHub
+  base: '/portfolio/',
+  build: {
+    assets: 'assets'
+  },
   vite: {
     ssr: {
       external: ["gsap"]
