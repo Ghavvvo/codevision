@@ -5,6 +5,8 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
+  output: 'static',
+  base: '/portfolio/', // Cambia esto si tu repo tiene otro nombre
   vite: {
     ssr: {
       external: ["gsap"]
