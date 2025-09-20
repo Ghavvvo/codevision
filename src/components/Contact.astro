@@ -21,7 +21,7 @@
           <h3 class="text-2xl font-display font-semibold mb-8">
             Información de Contacto
           </h3>
-          
+
           <div class="space-y-6">
             <!-- Email -->
             <div class="flex items-start">
@@ -107,7 +107,7 @@
             <div class="grid md:grid-cols-2 gap-6">
               <div>
                 <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
-                  Nombre completo *
+                  Nombre *
                 </label>
                 <input type="text" id="name" name="name" required
                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-turquoise focus:border-transparent transition-all duration-300">
@@ -121,79 +121,29 @@
               </div>
             </div>
 
-            <!-- Company and Phone -->
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
-                  Empresa
-                </label>
-                <input type="text" id="company" name="company"
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-turquoise focus:border-transparent transition-all duration-300">
-              </div>
-              <div>
-                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
-                  Teléfono
-                </label>
-                <input type="tel" id="phone" name="phone"
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-turquoise focus:border-transparent transition-all duration-300">
-              </div>
-            </div>
-
-            <!-- Service -->
+            <!-- Title -->
             <div>
-              <label for="service" class="block text-sm font-medium text-gray-700 mb-2">
-                Servicio de interés *
+              <label for="title" class="block text-sm font-medium text-gray-700 mb-2">
+                Título *
               </label>
-              <select id="service" name="service" required
-                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-turquoise focus:border-transparent transition-all duration-300">
-                <option value="">Selecciona un servicio</option>
-                <option value="web-development">Desarrollo Web</option>
-                <option value="mobile-development">Aplicaciones Móviles</option>
-                <option value="cloud-solutions">Soluciones Cloud</option>
-                <option value="ecommerce">E-commerce</option>
-                <option value="ui-ux-design">Diseño UI/UX</option>
-                <option value="consulting">Consultoría Tech</option>
-              </select>
-            </div>
-
-            <!-- Budget -->
-            <div>
-              <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">
-                Presupuesto estimado
-              </label>
-              <select id="budget" name="budget"
-                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-turquoise focus:border-transparent transition-all duration-300">
-                <option value="">Selecciona un rango</option>
-                <option value="under-10k">Menos de 10.000€</option>
-                <option value="10k-25k">10.000€ - 25.000€</option>
-                <option value="25k-50k">25.000€ - 50.000€</option>
-                <option value="50k-100k">50.000€ - 100.000€</option>
-                <option value="over-100k">Más de 100.000€</option>
-              </select>
+              <input type="text" id="title" name="title" required
+                     placeholder="Asunto de tu consulta"
+                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-turquoise focus:border-transparent transition-all duration-300">
             </div>
 
             <!-- Message -->
             <div>
               <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
-                Cuéntanos sobre tu proyecto *
+                Mensaje *
               </label>
               <textarea id="message" name="message" rows="5" required
-                        placeholder="Describe tu proyecto, objetivos, funcionalidades deseadas, plazos, etc."
+                        placeholder="Escribe tu mensaje aquí..."
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-turquoise focus:border-transparent transition-all duration-300"></textarea>
-            </div>
-
-            <!-- Privacy -->
-            <div class="flex items-start">
-              <input type="checkbox" id="privacy" name="privacy" required
-                     class="mt-1 w-4 h-4 text-primary-turquoise border-gray-300 rounded focus:ring-primary-turquoise">
-              <label for="privacy" class="ml-2 text-sm text-gray-600">
-                Acepto la <a href="#" class="text-primary-blue hover:text-primary-dark">política de privacidad</a> y el tratamiento de mis datos para responder a mi consulta. *
-              </label>
             </div>
 
             <!-- Submit Button -->
             <div class="pt-4">
-              <button type="submit" 
+              <button type="submit"
                       class="btn-hover w-full bg-primary-orange text-white font-semibold py-4 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center">
                 <i class="las la-paper-plane mr-3"></i>
                 <span>Enviar Mensaje</span>
@@ -220,37 +170,55 @@
 </section>
 
 <script>
+  import emailjs from '@emailjs/browser';
+
   document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contact-form');
     const submitBtn = form.querySelector('button[type="submit"]');
     const btnText = submitBtn.querySelector('span');
     const loadingSpinner = submitBtn.querySelector('.loading-spinner');
     const successMessage = document.getElementById('success-message');
-    
+    const publicKey = 'bQvDFbtWpp4k1AIz7'
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       // Show loading state
       btnText.textContent = 'Enviando...';
+
+      emailjs.sendForm('service_40wm9gh', 'template_swlrtm6',form, {
+            publicKey: publicKey,
+          })
+          .then(
+             async () => {
+
+                // Simulate form submission (replace with actual API call)
+                await new Promise(resolve => setTimeout(resolve, 2000));
+
+                // Show success message
+                successMessage.classList.remove('hidden');
+                form.reset();
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                  successMessage.classList.add('hidden');
+                }, 5000);
+
+                console.log('SUCCESS!');
+              },
+              (error) => {
+                console.log(publicKey)
+                console.log('FAILED...', error.text);
+              },
+          );
       loadingSpinner.classList.remove('hidden');
       submitBtn.disabled = true;
-      
-      // Simulate form submission (replace with actual API call)
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Show success message
-      successMessage.classList.remove('hidden');
-      form.reset();
-      
+
       // Reset button state
       btnText.textContent = 'Enviar Mensaje';
       loadingSpinner.classList.add('hidden');
       submitBtn.disabled = false;
-      
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        successMessage.classList.add('hidden');
-      }, 5000);
+
+
     });
   });
 </script>
