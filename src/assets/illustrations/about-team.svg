@@ -1,0 +1,89 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Equipo colaborando</title>
+  <desc id="desc">Ilustración abstracta de un equipo colaborando con elementos de código</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22E6B8" stop-opacity="0.10"/>
+      <stop offset="50%" stop-color="#4F8DF7" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#FF8A4C" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="orbGrad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22E6B8"/>
+      <stop offset="100%" stop-color="#4F8DF7"/>
+    </linearGradient>
+    <linearGradient id="orbGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4F8DF7"/>
+      <stop offset="100%" stop-color="#FF8A4C"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22E6B8"/>
+      <stop offset="100%" stop-color="#4F8DF7"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="24"/>
+    </filter>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#1E293B" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="900" rx="40" fill="url(#bgGrad)"/>
+
+  <!-- Soft blobs -->
+  <circle cx="160" cy="160" r="110" fill="#22E6B8" opacity="0.18" filter="url(#soft)"/>
+  <circle cx="1040" cy="280" r="140" fill="#4F8DF7" opacity="0.18" filter="url(#soft)"/>
+  <circle cx="220" cy="740" r="120" fill="#FF8A4C" opacity="0.16" filter="url(#soft)"/>
+
+  <!-- Collaboration board -->
+  <g filter="url(#shadow)">
+    <rect x="200" y="200" width="800" height="500" rx="28" fill="#FFFFFF"/>
+    <rect x="200" y="200" width="800" height="80" rx="28" fill="#F0F6FF"/>
+    <circle cx="248" cy="240" r="10" fill="#22E6B8"/>
+    <circle cx="280" cy="240" r="10" fill="#4F8DF7"/>
+    <circle cx="312" cy="240" r="10" fill="#FF8A4C"/>
+
+    <!-- Code blocks -->
+    <rect x="260" y="320" width="240" height="70" rx="12" fill="#F7FBFF" stroke="#E5F0FF"/>
+    <rect x="260" y="410" width="200" height="18" rx="9" fill="#EAF3FF"/>
+    <rect x="260" y="440" width="150" height="18" rx="9" fill="#EAF3FF"/>
+
+    <rect x="500" y="320" width="200" height="160" rx="12" fill="#F7FBFF" stroke="#E5F0FF"/>
+    <rect x="720" y="320" width="220" height="70" rx="12" fill="#F7FBFF" stroke="#E5F0FF"/>
+    <rect x="720" y="410" width="180" height="18" rx="9" fill="#EAF3FF"/>
+
+    <!-- Colored tag -->
+    <rect x="500" y="500" width="180" height="28" rx="14" fill="url(#cardGrad)" opacity="0.15"/>
+  </g>
+
+  <!-- Team avatars (abstract) -->
+  <g>
+    <!-- Person 1 -->
+    <circle cx="420" cy="640" r="36" fill="#4F8DF7"/>
+    <rect x="384" y="676" width="72" height="80" rx="20" fill="#EAF3FF"/>
+    <!-- Person 2 -->
+    <circle cx="600" cy="620" r="40" fill="#22E6B8"/>
+    <rect x="556" y="660" width="88" height="100" rx="22" fill="#E7FFF9"/>
+    <!-- Person 3 -->
+    <circle cx="770" cy="640" r="34" fill="#FF8A4C"/>
+    <rect x="736" y="674" width="68" height="84" rx="18" fill="#FFF4ED"/>
+  </g>
+
+  <!-- Orbits / nodes -->
+  <g>
+    <circle cx="960" cy="560" r="10" fill="url(#orbGrad1)"/>
+    <circle cx="240" cy="520" r="8" fill="url(#orbGrad2)"/>
+    <circle cx="920" cy="360" r="6" fill="#22E6B8"/>
+    <circle cx="320" cy="340" r="6" fill="#4F8DF7"/>
+    <circle cx="640" cy="280" r="8" fill="#FF8A4C"/>
+  </g>
+
+  <!-- Brackets and symbols -->
+  <g fill="#9DB8FF" opacity="0.8">
+    <path d="M520 380 h16 v-12 h12 v40 h-12 v-12 h-16 v-16 z"/>
+    <path d="M720 468 h40 v8 h-40 v-8 z"/>
+    <path d="M300 480 h28 v8 h-28 v-8 z"/>
+    <circle cx="680" cy="486" r="3"/>
+  </g>
+</svg>
+
