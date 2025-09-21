@@ -178,47 +178,87 @@
     const btnText = submitBtn.querySelector('span');
     const loadingSpinner = submitBtn.querySelector('.loading-spinner');
     const successMessage = document.getElementById('success-message');
-    const publicKey = 'bQvDFbtWpp4k1AIz7'
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+    const publicKey = 'bQvDFbtWpp4k1AIz7';
 
-      // Show loading state
+    // Función para mostrar estado de carga
+    const showLoadingState = () => {
       btnText.textContent = 'Enviando...';
-
-      emailjs.sendForm('service_40wm9gh', 'template_swlrtm6',form, {
-            publicKey: publicKey,
-          })
-          .then(
-             async () => {
-
-                // Simulate form submission (replace with actual API call)
-                await new Promise(resolve => setTimeout(resolve, 2000));
-
-                // Show success message
-                successMessage.classList.remove('hidden');
-                form.reset();
-
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                  successMessage.classList.add('hidden');
-                }, 5000);
-
-                console.log('SUCCESS!');
-              },
-              (error) => {
-                console.log(publicKey)
-                console.log('FAILED...', error.text);
-              },
-          );
       loadingSpinner.classList.remove('hidden');
       submitBtn.disabled = true;
+    };
 
-      // Reset button state
+    // Función para restaurar estado normal del botón
+    const resetButtonState = () => {
       btnText.textContent = 'Enviar Mensaje';
       loadingSpinner.classList.add('hidden');
       submitBtn.disabled = false;
+    };
 
+    // Función para mostrar mensaje de éxito
+    const showSuccessMessage = () => {
+      successMessage.classList.remove('hidden');
+      form.reset();
 
+      // Ocultar mensaje después de 5 segundos
+      setTimeout(() => {
+        successMessage.classList.add('hidden');
+      }, 5000);
+    };
+
+    // Función para mostrar mensaje de error
+    const showErrorMessage = (error) => {
+      // Crear mensaje de error si no existe
+      let errorMessage = document.getElementById('error-message');
+      if (!errorMessage) {
+        errorMessage = document.createElement('div');
+        errorMessage.id = 'error-message';
+        errorMessage.className = 'mt-6 p-4 bg-red-100 border border-red-300 rounded-lg';
+        errorMessage.innerHTML = `
+          <div class="flex items-center">
+            <i class="las la-exclamation-circle text-red-600 text-xl mr-3"></i>
+            <p class="text-red-700">
+              Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo.
+            </p>
+          </div>
+        `;
+        successMessage.parentNode.appendChild(errorMessage);
+      }
+
+      errorMessage.classList.remove('hidden');
+
+      // Ocultar mensaje después de 5 segundos
+      setTimeout(() => {
+        errorMessage.classList.add('hidden');
+      }, 5000);
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      try {
+        // Mostrar estado de carga
+        showLoadingState();
+
+        // Enviar formulario con EmailJS
+        await emailjs.sendForm('service_40wm9gh', 'template_swlrtm6', form, {
+          publicKey: publicKey,
+        });
+
+        console.log('Mensaje enviado exitosamente');
+
+        // Mostrar mensaje de éxito
+        showSuccessMessage();
+
+      } catch (error) {
+        console.error('Error al enviar mensaje:', error);
+
+        // Mostrar mensaje de error
+        showErrorMessage(error);
+
+      } finally {
+        // Siempre restaurar el estado del botón
+        resetButtonState();
+      }
     });
   });
 </script>
