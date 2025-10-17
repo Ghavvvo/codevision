@@ -7,7 +7,7 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
   site: 'https://Ghavvvo.github.io', // Reemplaza 'tuusuario' con tu nombre de usuario de GitHub
-  base: '/portfolio/',
+  base: '/portfolio',
   build: {
     assets: 'assets'
   },
