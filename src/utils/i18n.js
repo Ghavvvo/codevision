@@ -9,6 +9,7 @@ export const translations = {
     hero: {
       transform: 'We Transform',
       ideas: 'Ideas',
+      typewriterWords: ['ideas', 'concepts', 'visions'],
       into: 'into digital solutions',
       subtitle: 'We are CodeVision, your strategic partner in software development. We create web and mobile applications that drive your business growth.',
       cta: 'Start Project',
@@ -194,6 +195,7 @@ export const translations = {
     hero: {
       transform: 'Transformamos',
       ideas: 'ideas',
+      typewriterWords: ['ideas', 'conceptos', 'visiones'],
       into: 'en soluciones digitales',
       subtitle: 'Somos CodeVision, tu socio estratégico en desarrollo de software. Creamos aplicaciones web y móviles que impulsan el crecimiento de tu negocio.',
       cta: 'Comenzar Proyecto',
