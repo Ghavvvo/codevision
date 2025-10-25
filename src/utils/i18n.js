@@ -15,9 +15,9 @@ export const translations = {
       cta: 'Start Project',
       learn: 'View Services',
       stats: {
-        projects: 'Completed Projects',
-        experience: 'Years of Experience',
-        clients: 'Satisfied Clients'
+        experience: 'Years in the Industry',
+        technologies: 'Technologies Mastered',
+        consulting: 'Free Initial Consultation'
       }
     },
     services: {
@@ -201,9 +201,9 @@ export const translations = {
       cta: 'Comenzar Proyecto',
       learn: 'Ver Servicios',
       stats: {
-        projects: 'Proyectos Completados',
-        experience: 'Años de Experiencia',
-        clients: 'Clientes Satisfechos'
+        experience: 'Años en el Sector',
+        technologies: 'Tecnologías Dominadas',
+        consulting: 'Consultoría Inicial Gratis'
       }
     },
     services: {
