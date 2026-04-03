@@ -6,9 +6,9 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
-  site: 'https://ghavvvo.github.io/codevision/', // Reemplaza 'tuusuario' con tu nombre de usuario de GitHub
+  site: 'https://ghavvvo.github.io/', // Reemplaza 'tuusuario' con tu nombre de usuario de GitHub
   // Ensure `base` ends with a trailing slash for correct asset URLs on GitHub Pages
-  base: '/codevision/',
+  base: '/',
   build: {
     assets: 'assets'
   },
