@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#1e293b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1"/>
+    </linearGradient>
+
+    <!-- Accent gradient -->
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#0ea5e9;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Large glow -->
+    <filter id="glow-large">
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Drop shadow for text -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+
+    <!-- Code pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.03"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Decorative orbs -->
+  <circle cx="1000" cy="150" r="200" fill="#00d4aa" opacity="0.04" filter="url(#glow-large)"/>
+  <circle cx="200" cy="500" r="180" fill="#8b5cf6" opacity="0.04" filter="url(#glow-large)"/>
+  <circle cx="900" cy="450" r="120" fill="#0ea5e9" opacity="0.03" filter="url(#glow-large)"/>
+
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#accent)"/>
+
+  <!-- Left decorative code brackets -->
+  <g filter="url(#glow)" opacity="0.15">
+    <text x="60" y="180" font-family="monospace" font-size="120" fill="#00d4aa">&lt;/&gt;</text>
+  </g>
+
+  <!-- Main content area -->
+  <!-- Logo icon -->
+  <g transform="translate(100, 180)">
+    <rect width="70" height="70" rx="16" fill="url(#accent)" filter="url(#glow)"/>
+    <text x="35" y="48" font-family="monospace" font-size="36" font-weight="bold" fill="#0f172a" text-anchor="middle">&lt;/&gt;</text>
+  </g>
+
+  <!-- Brand name -->
+  <text x="200" y="240" font-family="Arial,Helvetica,sans-serif" font-size="84" font-weight="900" fill="#ffffff" filter="url(#shadow)" letter-spacing="-2">CodeVision</text>
+
+  <!-- Tagline -->
+  <text x="110" y="320" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="300" fill="#94a3b8" letter-spacing="1">Innovative Software Development</text>
+
+  <!-- Divider line -->
+  <line x1="110" y1="350" x2="1090" y2="350" stroke="url(#accent)" stroke-width="2" opacity="0.4"/>
+
+  <!-- Service pills -->
+  <g transform="translate(110, 390)">
+    <!-- Row 1 -->
+    <rect width="220" height="44" rx="22" fill="#00d4aa" opacity="0.15" stroke="#00d4aa" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="110" y="28" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="600" fill="#00d4aa" text-anchor="middle">Web Development</text>
+
+    <rect x="240" width="220" height="44" rx="22" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="350" y="28" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="600" fill="#0ea5e9" text-anchor="middle">Mobile Apps</text>
+
+    <rect x="480" width="220" height="44" rx="22" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="590" y="28" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="600" fill="#8b5cf6" text-anchor="middle">Data Science</text>
+
+    <rect x="720" width="220" height="44" rx="22" fill="#f97316" opacity="0.15" stroke="#f97316" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="830" y="28" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="600" fill="#f97316" text-anchor="middle">UI/UX Design</text>
+
+    <!-- Row 2 -->
+    <rect y="60" width="220" height="44" rx="22" fill="#ec4899" opacity="0.15" stroke="#ec4899" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="110" y="88" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="600" fill="#ec4899" text-anchor="middle">E-Commerce</text>
+
+    <rect x="240" y="60" width="220" height="44" rx="22" fill="#14b8a6" opacity="0.15" stroke="#14b8a6" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="350" y="88" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="600" fill="#14b8a6" text-anchor="middle">Tech Consulting</text>
+
+    <rect x="480" y="60" width="220" height="44" rx="22" fill="#eab308" opacity="0.15" stroke="#eab308" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="590" y="88" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="600" fill="#eab308" text-anchor="middle">Cloud Solutions</text>
+
+    <rect x="720" y="60" width="220" height="44" rx="22" fill="#06b6d4" opacity="0.15" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="830" y="88" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="600" fill="#06b6d4" text-anchor="middle">Custom Software</text>
+  </g>
+
+  <!-- Bottom section -->
+  <line x1="110" y1="520" x2="1090" y2="520" stroke="#ffffff" stroke-width="1" opacity="0.1"/>
+
+  <!-- CTA text -->
+  <text x="110" y="560" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="500" fill="#cbd5e1">Transform your ideas into digital solutions</text>
+
+  <!-- Website URL -->
+  <text x="1090" y="560" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#00d4aa" text-anchor="end" filter="url(#glow)">codevision.click</text>
+</svg>

@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "codevision",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.2",
     "@astrojs/tailwind": "^6.0.2",
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/typography": "^0.5.16",

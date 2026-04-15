@@ -1,0 +1,8 @@
+# robots.txt for CodeVision
+# https://codevision.click
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://codevision.click/sitemap.xml

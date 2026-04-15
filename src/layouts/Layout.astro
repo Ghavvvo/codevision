@@ -2,13 +2,44 @@
 export interface Props {
   title: string;
   description?: string;
+  lang?: 'en' | 'es';
 }
 
-const { title, description = "CodeVision - Transformamos ideas en soluciones digitales innovadoras" } = Astro.props;
+const { title, description = "CodeVision - Transformamos ideas en soluciones digitales innovadoras", lang = 'en' } = Astro.props;
+
+const siteUrl = Astro.site ? Astro.site.toString() : 'https://codevision.click';
+const pathname = Astro.url.pathname === '/' ? '' : Astro.url.pathname;
+const canonicalUrl = `${siteUrl}${pathname}`;
+const ogImageUrl = `${siteUrl}og-image.svg`;
+
+const keywords = {
+  en: 'web development, mobile apps, software development, data science, e-commerce, UI/UX design, tech consulting, custom software, digital solutions',
+  es: 'desarrollo web, aplicaciones móviles, desarrollo de software, ciencia de datos, e-commerce, diseño UI/UX, consultoría tecnológica, software a medida, soluciones digitales'
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "CodeVision",
+  "url": siteUrl,
+  "logo": `${siteUrl}favicon.svg`,
+  "description": description,
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+5354702549",
+    "contactType": "customer service",
+    "email": "developers.codevision@gmail.com"
+  },
+  "sameAs": [
+    "https://linkedin.com/company/codevision",
+    "https://twitter.com/codevision",
+    "https://github.com/codevision"
+  ]
+};
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -18,21 +49,35 @@ const { title, description = "CodeVision - Transformamos ideas en soluciones dig
 
     <!-- SEO Meta Tags -->
     <title>{title}</title>
-    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="author" content="CodeVision" />
-    <meta name="keywords" content="desarrollo web, aplicaciones móviles, software, programación, Madrid, España" />
+    <meta name="keywords" content={keywords[lang]} />
+    <meta name="language" content={lang === 'es' ? 'Spanish' : 'English'} />
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href={`${siteUrl}?lang=en`} />
+    <link rel="alternate" hreflang="es" href={`${siteUrl}?lang=es`} />
+    <link rel="alternate" hreflang="x-default" href={siteUrl} />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content="https://codevision.com" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content="CodeVision" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CodeVision - Innovative Software Development" />
+    <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content="CodeVision - Innovative Software Development" />
 
     <!-- Preload Critical Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,35 +87,8 @@ const { title, description = "CodeVision - Transformamos ideas en soluciones dig
     <!-- Line Awesome Icons -->
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "CodeVision",
-        "url": "https://codevision.com",
-        "logo": "https://codevision.com/logo.png",
-        "description": "Empresa de desarrollo de software especializada en aplicaciones web y móviles",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Calle Innovation 123",
-          "addressLocality": "Madrid",
-          "postalCode": "28001",
-          "addressCountry": "ES"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+34912345678",
-          "contactType": "customer service",
-          "email": "hola@codevision.com"
-        },
-        "sameAs": [
-          "https://linkedin.com/company/codevision",
-          "https://twitter.com/codevision",
-          "https://github.com/codevision"
-        ]
-      }
-    </script>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>
   <body>
     <!-- Navigation -->

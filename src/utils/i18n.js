@@ -135,6 +135,28 @@ export const translations = {
         }
       }
     },
+    featuredProject: {
+      badge: 'Latest Project',
+      title: 'VillaD2 — Hostel Website',
+      subtitle: 'Official website of Hostal VillaD2, located in the Vedado, La Habana, Cuba',
+      heroTagline: 'Official site of Hostal VillaD2',
+      visitSite: 'Visit Site',
+      aboutTitle: 'About the Project',
+      aboutText: 'VillaD2 is the official website of Hostal VillaD2, located in the Vedado neighborhood of La Habana, Cuba. The site features room booking, photo galleries, guest reviews, and a complete backoffice for customizing sections, managing reviews, and viewing analytics.',
+      features: {
+        booking: 'Multi-location booking system',
+        dashboard: 'Real-time analytics dashboard',
+        i18n: 'Multi-language support (ES/EN)'
+      },
+      techTitle: 'Technologies Used',
+      tech: {
+        react: 'Frontend with TypeScript',
+        nodejs: 'RESTful API Backend',
+        mysql: 'Relational database',
+        paypal: 'Online payment integration'
+      },
+      cta: 'View Live Project'
+    },
     testimonials: {
       title: 'What Our Clients Say',
       subtitle: 'The satisfaction of our clients is our greatest achievement. Here are some of their experiences working with us.',
@@ -162,6 +184,7 @@ export const translations = {
       info: {
         title: 'Contact Information',
         phone: 'Phone',
+        email: 'Email',
         schedule: 'Schedule',
         scheduleText: 'Mon - Fri: 9:00 - 18:00\nSat: 10:00 - 14:00'
       }
@@ -171,6 +194,7 @@ export const translations = {
       services: 'Services',
       company: 'Company',
       contact: 'Contact',
+      email: 'Email',
       schedule: 'Schedule',
       scheduleText: 'Mon - Fri: 9:00 - 18:00\nSat: 10:00 - 14:00',
       rights: 'All rights reserved',
@@ -321,6 +345,28 @@ export const translations = {
         }
       }
     },
+    featuredProject: {
+      badge: 'Último Proyecto',
+      title: 'VillaD2 — Sitio Web del Hostal',
+      subtitle: 'Sitio oficial del Hostal VillaD2, ubicado en el Vedado, La Habana, Cuba',
+      heroTagline: 'Sitio oficial del Hostal VillaD2',
+      visitSite: 'Visitar Sitio',
+      aboutTitle: 'Sobre el Proyecto',
+      aboutText: 'VillaD2 es el sitio oficial del Hostal VillaD2, ubicado en el barrio del Vedado, La Habana, Cuba. El sitio incluye reservas de habitaciones, galería de fotos, reseñas de huéspedes y un backoffice completo para personalizar secciones, gestionar reseñas y ver analíticas.',
+      features: {
+        booking: 'Sistema de reservas multi-sucursal',
+        dashboard: 'Dashboard analítico en tiempo real',
+        i18n: 'Soporte multiidioma (ES/EN)'
+      },
+      techTitle: 'Tecnologías Utilizadas',
+      tech: {
+        react: 'Frontend con TypeScript',
+        nodejs: 'Backend API RESTful',
+        mysql: 'Base de datos relacional',
+        paypal: 'Integración de pagos online'
+      },
+      cta: 'Ver Proyecto en Vivo'
+    },
     testimonials: {
       title: 'Lo que Dicen Nuestros Clientes',
       subtitle: 'La satisfacción de nuestros clientes es nuestro mayor logro. Aquí tienes algunas de sus experiencias trabajando con nosotros.',
@@ -348,6 +394,7 @@ export const translations = {
       info: {
         title: 'Información de Contacto',
         phone: 'Teléfono',
+        email: 'Email',
         schedule: 'Horario',
         scheduleText: 'Lun - Vie: 9:00 - 18:00\nSáb: 10:00 - 14:00'
       }
@@ -357,6 +404,7 @@ export const translations = {
       services: 'Servicios',
       company: 'Empresa',
       contact: 'Contacto',
+      email: 'Email',
       schedule: 'Horario',
       scheduleText: 'Lun - Vie: 9:00 - 18:00\nSáb: 10:00 - 14:00',
       rights: 'Todos los derechos reservados',

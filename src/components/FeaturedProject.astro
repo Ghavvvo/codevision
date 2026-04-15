@@ -1,0 +1,151 @@
+---
+// Featured Project - VillaD2 Component
+---
+
+<section id="featured-project" class="py-24 bg-gradient-to-br from-gray-900 via-primary-dark to-gray-900 relative overflow-hidden">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-primary-turquoise rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-primary-blue rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+  </div>
+
+  <div class="container mx-auto px-8 relative z-10">
+    <!-- Badge -->
+    <div class="text-center mb-8 reveal">
+      <span class="inline-flex items-center px-4 py-2 bg-primary-orange/20 text-primary-orange text-sm font-semibold rounded-full border border-primary-orange/30">
+        <i class="las la-star mr-2"></i>
+        <span data-i18n="featuredProject.badge">Último Proyecto</span>
+      </span>
+    </div>
+
+    <!-- Section Header -->
+    <div class="text-center mb-16 reveal">
+      <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6" data-i18n="featuredProject.title">
+        VillaD2 — Sistema de Gestión Hotelera
+      </h2>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-i18n="featuredProject.subtitle">
+        Una plataforma integral para la gestión de reservas y habitaciones hoteleras con sistema de facturación ERP integrado
+      </p>
+    </div>
+
+    <!-- Featured Project Card -->
+    <div class="max-w-6xl mx-auto reveal">
+      <div class="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+        <!-- Project Image -->
+        <div class="relative group overflow-hidden">
+          <div class="relative w-full h-64 md:h-96 bg-gradient-to-br from-primary-dark via-gray-800 to-primary-blue flex items-center justify-center overflow-hidden">
+            <!-- Background image -->
+            <img 
+              src="/villad2-hero.png"
+              alt="VillaD2 - Sistema de Gestión Hotelera" 
+              class="absolute inset-0 w-full h-full object-cover opacity-40 transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+            >
+            <!-- Overlay content -->
+            <div class="relative z-10 text-center px-8">
+              <div class="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full mb-4 border border-white/20">
+                <i class="las la-hotel text-4xl text-primary-turquoise"></i>
+              </div>
+              <h3 class="text-3xl md:text-4xl font-display font-bold text-white mb-2">VillaD2.com</h3>
+              <p class="text-lg text-gray-300" data-i18n="featuredProject.heroTagline">Sitio oficial del Hostal VillaD2</p>
+            </div>
+          </div>
+          <!-- Overlay on hover -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-8">
+              <a 
+                href="https://villad2.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="inline-flex items-center px-6 py-3 bg-primary-turquoise text-white font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300"
+              >
+                <span data-i18n="featuredProject.visitSite">Visitar Sitio</span>
+                <i class="las la-external-link-alt ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Info -->
+        <div class="p-8 md:p-12">
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <!-- Description -->
+            <div>
+              <h3 class="text-2xl font-display font-semibold text-white mb-4" data-i18n="featuredProject.aboutTitle">
+                Sobre el Proyecto
+              </h3>
+              <p class="text-gray-300 leading-relaxed mb-4" data-i18n="featuredProject.aboutText">
+                VillaD2 es un sistema completo de gestión hotelera que permite administrar reservas, habitaciones y clientes en múltiples ubicaciones. Incluye un módulo ERP integrado para facturación, pagos y reportes financieros en tiempo real.
+              </p>
+              <ul class="space-y-3 text-gray-300">
+                <li class="flex items-start">
+                  <i class="las la-check-circle text-primary-turquoise mt-1 mr-3"></i>
+                  <span data-i18n="featuredProject.features.booking">Sistema de reservas multi-sucursal</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="las la-check-circle text-primary-turquoise mt-1 mr-3"></i>
+                  <span data-i18n="featuredProject.features.dashboard">Dashboard analítico en tiempo real</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="las la-check-circle text-primary-turquoise mt-1 mr-3"></i>
+                  <span data-i18n="featuredProject.features.i18n">Soporte multiidioma (ES/EN)</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tech Stack -->
+            <div>
+              <h3 class="text-2xl font-display font-semibold text-white mb-4" data-i18n="featuredProject.techTitle">
+                Tecnologías Utilizadas
+              </h3>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-primary-turquoise/50 transition-colors duration-300">
+                  <div class="flex items-center mb-2">
+                    <i class="lab la-react text-primary-turquoise text-xl mr-2"></i>
+                    <span class="text-white font-semibold">React</span>
+                  </div>
+                  <p class="text-gray-400 text-sm" data-i18n="featuredProject.tech.react">Frontend con TypeScript</p>
+                </div>
+                <div class="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-primary-turquoise/50 transition-colors duration-300">
+                  <div class="flex items-center mb-2">
+                    <i class="lab la-node-js text-green-500 text-xl mr-2"></i>
+                    <span class="text-white font-semibold">Node.js</span>
+                  </div>
+                  <p class="text-gray-400 text-sm" data-i18n="featuredProject.tech.nodejs">Backend API RESTful</p>
+                </div>
+                <div class="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-primary-turquoise/50 transition-colors duration-300">
+                  <div class="flex items-center mb-2">
+                    <i class="las la-database text-blue-400 text-xl mr-2"></i>
+                    <span class="text-white font-semibold">MySQL</span>
+                  </div>
+                  <p class="text-gray-400 text-sm" data-i18n="featuredProject.tech.mysql">Base de datos relacional</p>
+                </div>
+                <div class="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-primary-turquoise/50 transition-colors duration-300">
+                  <div class="flex items-center mb-2">
+                    <i class="lab la-paypal text-blue-400 text-xl mr-2"></i>
+                    <span class="text-white font-semibold">PayPal</span>
+                  </div>
+                  <p class="text-gray-400 text-sm" data-i18n="featuredProject.tech.paypal">Integración de pagos online</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <div class="text-center pt-8 border-t border-white/10">
+            <a 
+              href="https://villad2.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center px-8 py-4 bg-primary-orange text-white font-semibold rounded-lg shadow-lg hover:shadow-xl hover:bg-opacity-90 transition-all duration-300 text-lg"
+            >
+              <i class="las la-globe mr-3"></i>
+              <span data-i18n="featuredProject.cta">Ver Proyecto en Vivo</span>
+              <i class="las la-arrow-right ml-3"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
