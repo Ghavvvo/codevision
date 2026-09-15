@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://codevision.click/sitemap.xml
+Sitemap: https://codevision.click/sitemap-index.xml
