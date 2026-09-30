@@ -157,6 +157,20 @@ export const translations = {
       },
       cta: 'View Live Project'
     },
+    agora: {
+      badge: 'Product',
+      title: 'Agora — Point of Sale System',
+      subtitle: 'Commercial management system for convenience stores: sales, inventory, cash register and real-time margin reports',
+      modulesTitle: 'Included Modules',
+      modules: {
+        pos: 'Point of sale with cart and fast checkout',
+        inventory: 'Inventory, products and categories',
+        cash: 'Cash register control and returns',
+        reports: 'Revenue, cost and profit reports with margins'
+      },
+      techTitle: 'Technologies Used',
+      cta: 'Request Demo'
+    },
     testimonials: {
       title: 'What Our Clients Say',
       subtitle: 'The satisfaction of our clients is our greatest achievement. Here are some of their experiences working with us.',
@@ -366,6 +380,20 @@ export const translations = {
         paypal: 'Integración de pagos online'
       },
       cta: 'Ver Proyecto en Vivo'
+    },
+    agora: {
+      badge: 'Producto',
+      title: 'Agora — Sistema de Punto de Venta',
+      subtitle: 'Sistema de gestión comercial para minimarkets: ventas, inventario, caja y reportes de márgenes en tiempo real',
+      modulesTitle: 'Módulos Incluidos',
+      modules: {
+        pos: 'Punto de venta con carrito y cobro rápido',
+        inventory: 'Inventario, productos y categorías',
+        cash: 'Control de caja y devoluciones',
+        reports: 'Reportes de ingresos, costos y ganancias con márgenes'
+      },
+      techTitle: 'Tecnologías Utilizadas',
+      cta: 'Solicitar Demo'
     },
     testimonials: {
       title: 'Lo que Dicen Nuestros Clientes',

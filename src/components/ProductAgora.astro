@@ -1,0 +1,105 @@
+---
+// Product Showcase - Agora POS
+---
+
+<section id="product-agora" class="py-24 bg-white">
+  <div class="container mx-auto px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12 reveal">
+      <span class="inline-flex items-center px-4 py-2 bg-primary-turquoise/10 text-primary-turquoise text-sm font-semibold rounded-full border border-primary-turquoise/30 mb-6">
+        <i class="las la-box-open mr-2"></i>
+        <span data-i18n="agora.badge">Producto</span>
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-bold text-primary-dark mb-6" data-i18n="agora.title">
+        Agora — Sistema de Punto de Venta
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="agora.subtitle">
+        Sistema de gestión comercial para minimarkets: ventas, inventario, caja y reportes de márgenes en tiempo real
+      </p>
+    </div>
+
+    <!-- Screenshots -->
+    <div class="grid lg:grid-cols-3 gap-6 mb-16 reveal">
+      <div class="lg:col-span-2 rounded-lg overflow-hidden shadow-lg border border-gray-100 group">
+        <img
+          src="/agora-pos-ventas.png"
+          alt="Agora - Punto de venta"
+          class="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        >
+      </div>
+      <div class="rounded-lg overflow-hidden shadow-lg border border-gray-100 group">
+        <img
+          src="/agora-pos-productos.png"
+          alt="Agora - Gestión de productos"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        >
+      </div>
+      <div class="lg:col-span-3 rounded-lg overflow-hidden shadow-lg border border-gray-100 group">
+        <img
+          src="/agora-pos-reportes.png"
+          alt="Agora - Reportes de ventas y ganancias"
+          class="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        >
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <!-- Modules -->
+      <div class="reveal">
+        <h3 class="text-2xl font-display font-semibold text-primary-dark mb-6" data-i18n="agora.modulesTitle">
+          Módulos Incluidos
+        </h3>
+        <ul class="space-y-3 text-gray-600">
+          <li class="flex items-start">
+            <i class="las la-check-circle text-primary-turquoise mt-1 mr-3"></i>
+            <span data-i18n="agora.modules.pos">Punto de venta con carrito y cobro rápido</span>
+          </li>
+          <li class="flex items-start">
+            <i class="las la-check-circle text-primary-turquoise mt-1 mr-3"></i>
+            <span data-i18n="agora.modules.inventory">Inventario, productos y categorías</span>
+          </li>
+          <li class="flex items-start">
+            <i class="las la-check-circle text-primary-turquoise mt-1 mr-3"></i>
+            <span data-i18n="agora.modules.cash">Control de caja y devoluciones</span>
+          </li>
+          <li class="flex items-start">
+            <i class="las la-check-circle text-primary-turquoise mt-1 mr-3"></i>
+            <span data-i18n="agora.modules.reports">Reportes de ingresos, costos y ganancias con márgenes</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tech Stack -->
+      <div class="reveal">
+        <h3 class="text-2xl font-display font-semibold text-primary-dark mb-6" data-i18n="agora.techTitle">
+          Tecnologías Utilizadas
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-2 bg-primary-dark text-white text-sm rounded">React</span>
+          <span class="px-3 py-2 bg-primary-dark text-white text-sm rounded">TypeScript</span>
+          <span class="px-3 py-2 bg-primary-dark text-white text-sm rounded">shadcn/ui</span>
+          <span class="px-3 py-2 bg-primary-dark text-white text-sm rounded">TanStack Query</span>
+          <span class="px-3 py-2 bg-primary-dark text-white text-sm rounded">NestJS</span>
+          <span class="px-3 py-2 bg-primary-dark text-white text-sm rounded">TypeORM</span>
+          <span class="px-3 py-2 bg-primary-dark text-white text-sm rounded">PostgreSQL</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-16 pt-8 border-t border-gray-100 reveal">
+      <a
+        href="https://wa.me/5354702549?text=Hola%20CodeVision%2C%20quiero%20solicitar%20una%20demo%20de%20Agora."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-hover inline-flex items-center px-8 py-4 bg-primary-orange text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
+      >
+        <i class="lab la-whatsapp text-2xl mr-3"></i>
+        <span data-i18n="agora.cta">Solicitar Demo</span>
+      </a>
+    </div>
+  </div>
+</section>
