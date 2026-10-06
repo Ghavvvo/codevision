@@ -171,6 +171,20 @@ export const translations = {
       techTitle: 'Technologies Used',
       cta: 'Request Demo'
     },
+    menu: {
+      badge: 'Product',
+      title: 'Online Menu — AI Videos + Chatbot',
+      subtitle: 'Digital menu for restaurants: every dish as an AI-generated video from your photos, with a chatbot answering prices, schedules and questions 24/7',
+      modulesTitle: 'What\'s Included',
+      modules: {
+        videos: 'Every dish as a short AI-generated video from your photos',
+        chatbot: 'Chatbot answering prices, ingredients, schedules and allergens 24/7',
+        onelink: 'One link, works on any phone with nothing to install',
+        update: 'Change a price and it updates everywhere'
+      },
+      techTitle: 'Technologies Used',
+      cta: 'Request Demo'
+    },
     testimonials: {
       title: 'What Our Clients Say',
       subtitle: 'The satisfaction of our clients is our greatest achievement. Here are some of their experiences working with us.',
@@ -391,6 +405,20 @@ export const translations = {
         inventory: 'Inventario, productos y categorías',
         cash: 'Control de caja y devoluciones',
         reports: 'Reportes de ingresos, costos y ganancias con márgenes'
+      },
+      techTitle: 'Tecnologías Utilizadas',
+      cta: 'Solicitar Demo'
+    },
+    menu: {
+      badge: 'Producto',
+      title: 'Menú Online — Videos IA + Chatbot',
+      subtitle: 'Menú digital para restaurantes: cada plato como video generado con IA a partir de tus fotos, con chatbot que responde precios, horarios y dudas 24/7',
+      modulesTitle: 'Qué Incluye',
+      modules: {
+        videos: 'Cada plato como video corto generado con IA desde tus fotos',
+        chatbot: 'Chatbot que responde precios, ingredientes, horarios y alergias 24/7',
+        onelink: 'Un solo enlace, funciona en cualquier celular sin instalar nada',
+        update: 'Cambias un precio y se actualiza en todas partes'
       },
       techTitle: 'Tecnologías Utilizadas',
       cta: 'Solicitar Demo'
